@@ -14,8 +14,7 @@ editor_camera = EditorCamera(enabled=True, ignore_paused=True)
 player = FirstPersonController(model='cube', z=-10, color=color.orange, origin_y=-.5, speed=8, collider='box')
 player.speed = 100
 
-roads = Entity(model='resources\\3d_models\\roads.glb', origin_y=-.5, scale=2,
-               texture='resources\\textures\\roads_texture.png',
+roads = Entity(model='resources\\3d_models\\roads.gltf', origin_y=-.5, scale=2,
                collider='box',
                shader=lit_with_shadows_shader
                )
@@ -114,10 +113,22 @@ class TrafficLight:
             self.switch_to_red()
 
 
-# Create traffic light
-traffic_light = TrafficLight(position=(-52, -3.75, 62.5), rotation_y=180)
+# Create traffic lights
+traffic_light = TrafficLight(position=(-52.7, -3.75, 62.18), rotation_y=180)
 traffic_light2 = TrafficLight(position=(-72.45, -3.75, 52.45), rotation_y=270)
-traffic_light3 = TrafficLight(position=(-72.45, -3.75, 71.82), rotation_y=90)
+traffic_light3 = TrafficLight(position=(-72.45, -3.75, 71.90), rotation_y=90)
+
+traffic_light4 = TrafficLight(position=(-72.45, -3.75, 189.44), rotation_y=0)
+traffic_light5 = TrafficLight(position=(-52.7, -3.75, 199.40), rotation_y=90)
+traffic_light6 = TrafficLight(position=(-52.7, -3.75, 179.50), rotation_y=270)
+
+traffic_light7 = TrafficLight(position=(-52.7, -3.75, -65.28), rotation_y=180)
+traffic_light8 = TrafficLight(position=(-72.45, -3.75, -75.00), rotation_y=270)
+traffic_light9 = TrafficLight(position=(-72.45, -3.75, -55.50), rotation_y=90)
+
+traffic_light10 = TrafficLight(position=(-72.45, -3.75, -193.89), rotation_y=0)
+traffic_light11 = TrafficLight(position=(-52.7, -3.75, -203.7), rotation_y=270)
+traffic_light12 = TrafficLight(position=(-52.7, -3.75, -183.7), rotation_y=270)
 
 
 def update():
